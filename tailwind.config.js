@@ -4,6 +4,7 @@ window.tailwind.config = {
     extend: {
       fontFamily: {
         sans: ["PT Sans", "PT Sans Fallback", "system-ui", "sans-serif"],
+        inter: ["Inter", "Inter Fallback", "system-ui", "sans-serif"],
       },
       colors: {
         border: "hsl(214.3 31.8% 91.4%)",
