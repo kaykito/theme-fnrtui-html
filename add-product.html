@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fnrt UI Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.config.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.js">
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 font-inter antialiased transition-colors duration-200">
+    <div class="flex h-screen overflow-hidden p-4 gap-4">
+        <div include-html="sidebar.html"></div>
+        <!-- Main Content -->
+        <main class="w-full bg-gray-50 p-8 overflow-y-auto min-h-screen">
+  <!-- HEADER -->
+  <div class="flex justify-between items-center mb-6">
+    <h1 class="text-2xl font-semibold">Add Products</h1>
+    <div class="flex gap-3">
+      <button class="px-4 py-2 rounded-md bg-gray-200 text-gray-700 hover:bg-gray-300">Discard</button>
+      <button class="px-4 py-2 rounded-md border border-gray-300 text-gray-700 hover:bg-gray-100">Save Draft</button>
+      <button class="px-4 py-2 rounded-md bg-black text-white hover:bg-gray-800">Publish</button>
+    </div>
+  </div>
+
+  <!-- GRID 2 KOLOM -->
+  <div class="grid grid-cols-3 gap-6 pb-20">
+
+    <!-- KIRI -->
+    <div class="col-span-2 flex flex-col gap-6">
+
+      <!-- PRODUCT DETAILS -->
+      <div class="border border-gray-200 rounded-2xl p-6 bg-white shadow-sm">
+        <h2 class="text-lg font-semibold mb-4">Product Details</h2>
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-medium mb-1">Name</label>
+            <input type="text" class="w-full border border-gray-300 rounded-md px-3 py-2" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1">SKU</label>
+            <input type="text" class="w-full border border-gray-300 rounded-md px-3 py-2" />
+          </div>
+          <div class="col-span-2">
+            <label class="block text-sm font-medium mb-1">Barcode</label>
+            <input type="text" class="w-full border border-gray-300 rounded-md px-3 py-2" />
+          </div>
+        </div>
+
+        <div class="mt-4">
+          <label class="block text-sm font-medium mb-1">Description (Optional)</label>
+          <textarea class="w-full border border-gray-300 rounded-md px-3 py-2 h-24"></textarea>
+          <p class="text-xs text-gray-500 mt-1">Set a description to the product for better visibility.</p>
+        </div>
+      </div>
+
+      <!-- PRODUCT IMAGES -->
+      <div class="border border-gray-200 rounded-2xl p-6 bg-white shadow-sm">
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="text-lg font-semibold">Product Images</h2>
+          <h3 class="text-sm font-medium text-gray-600">Add media from URL</h3>
+        </div>
+
+        <div
+          class="border-2 border-dashed border-gray-300 rounded-lg p-8 flex flex-col items-center justify-center text-center">
+          <div class="w-12 h-12 flex items-center justify-center rounded-full border border-gray-300 mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-gray-500">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3 16.5V19a2.25 2.25 0 002.25 2.25h13.5A2.25 2.25 0 0021 19v-2.5m-9-12v12m0-12l3.75 3.75M12 4.5L8.25 8.25" />
+            </svg>
+          </div>
+          <p class="text-gray-600 text-sm">Drop your images here</p>
+          <p class="text-xs text-gray-400 mb-3">PNG or JPG (max. 5MB)</p>
+          <button
+            class="border border-gray-300 rounded-md px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Select images</button>
+        </div>
+      </div>
+
+      <!-- VARIANTS -->
+      <div class="border border-gray-200 rounded-2xl p-6 bg-white shadow-sm">
+        <h2 class="text-lg font-semibold mb-4">Variants</h2>
+
+        <div class="grid grid-cols-3 gap-4 mb-3">
+          <div>
+            <label class="block text-sm font-medium mb-1">Options</label>
+            <select class="w-full border border-gray-300 rounded-md px-3 py-2 text-sm">
+              <option>Select a status</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1">Value</label>
+            <input type="text" class="w-full border border-gray-300 rounded-md px-3 py-2 text-sm" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1">Price</label>
+            <input type="text" class="w-full border border-gray-300 rounded-md px-3 py-2 text-sm" />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-4 mb-4">
+          <div>
+            <select class="w-full border border-gray-300 rounded-md px-3 py-2 text-sm">
+              <option>Select a status</option>
+            </select>
+          </div>
+          <div><input type="text" class="w-full border border-gray-300 rounded-md px-3 py-2 text-sm" /></div>
+          <div><input type="text" class="w-full border border-gray-300 rounded-md px-3 py-2 text-sm" /></div>
+        </div>
+
+        <button
+          class="flex items-center justify-center gap-2 w-full border-t border-gray-200 text-sm text-gray-700 py-3 hover:bg-gray-50">
+          <span class="text-lg font-bold">+</span> Add Variant
+        </button>
+      </div>
+    </div>
+
+    <!-- KANAN -->
+    <div class="flex flex-col gap-6">
+      <!-- PRICING -->
+      <div class="border border-gray-200 rounded-2xl p-6 bg-white shadow-sm">
+        <h2 class="text-lg font-semibold mb-4">Pricing</h2>
+        <div class="mb-3">
+          <label class="block text-sm font-medium mb-1">Base Price</label>
+          <input type="text" class="w-full border border-gray-300 rounded-md px-3 py-2" />
+        </div>
+        <div class="mb-3">
+          <label class="block text-sm font-medium mb-1">Discounted Price</label>
+          <input type="text" class="w-full border border-gray-300 rounded-md px-3 py-2" />
+        </div>
+        <div class="flex items-center gap-2">
+          <input type="checkbox" class="border-gray-300" />
+          <label class="text-sm text-gray-700">Charge tax on this product</label>
+        </div>
+      </div>
+
+      <!-- STATUS -->
+      <div class="border border-gray-200 rounded-2xl p-6 bg-white shadow-sm">
+        <h2 class="text-lg font-semibold mb-4">Status</h2>
+        <div class="flex items-center justify-between mb-2">
+          <span class="flex items-center gap-2 text-gray-700">
+            <span class="w-2.5 h-2.5 bg-yellow-500 rounded-full"></span>
+            Draft
+          </span>
+          <button
+            class="border border-gray-300 rounded-md px-3 py-1 text-sm text-gray-600 hover:bg-gray-100 transition">
+            Change
+          </button>
+        </div>
+        <p class="text-xs text-gray-500">Set the product status.</p>
+      </div>
+
+      <!-- CATEGORIES -->
+      <div class="border border-gray-200 rounded-2xl p-6 bg-white shadow-sm mb-10">
+        <h2 class="text-lg font-semibold mb-4">Categories</h2>
+        <div class="flex items-center gap-2 mb-3">
+          <select
+            class="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-gray-400">
+            <option selected>Select a category</option>
+          </select>
+          <button
+            class="border border-gray-300 rounded-md w-9 h-9 flex items-center justify-center text-lg text-gray-600 hover:bg-gray-100">
+            +
+          </button>
+        </div>
+        <div class="flex items-center gap-2">
+          <select
+            class="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-gray-400">
+            <option selected>Select a sub category</option>
+          </select>
+          <button
+            class="border border-gray-300 rounded-md w-9 h-9 flex items-center justify-center text-lg text-gray-600 hover:bg-gray-100">
+            +
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+    </div> 
+
+    <!-- JavaScript Modules -->
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/charts.js"></script>
+    <script src="assets/js/sidebar.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/notifications.js"></script>
+    <script src="assets/js/chat.js"></script>
+    <script src="assets/js/table.js"></script>
+    <script src="assets/js/interactions.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
