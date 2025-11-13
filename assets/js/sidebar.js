@@ -6,6 +6,7 @@ class SidebarManager {
   constructor() {
     this.sidebar = document.getElementById("sidebar");
     this.sidebarToggle = document.getElementById("sidebarToggle");
+    this.sidebarTitleContainer = document.querySelector(".sidebar-title-container");
     this.sidebarTitle = document.querySelector(".sidebar-title");
     this.sidebarSearch = document.querySelector(".sidebar-search");
     this.sidebarSectionTitles = document.querySelectorAll(".sidebar-section-title");
@@ -59,6 +60,11 @@ class SidebarManager {
     this.sidebar.classList.remove("w-72");
     this.sidebar.classList.add("w-16");
 
+    if (this.sidebarTitleContainer) {
+      this.sidebarTitleContainer.classList.add("justify-center");
+      this.sidebarTitleContainer.classList.remove("justify-between");
+    }
+
     // Hide elements
     if (this.sidebarTitle) this.sidebarTitle.style.display = "none";
     if (this.sidebarSearch) this.sidebarSearch.style.display = "none";
@@ -109,6 +115,11 @@ class SidebarManager {
   expandSidebar() {
     this.sidebar.classList.remove("w-16");
     this.sidebar.classList.add("w-72");
+
+    if (this.sidebarTitleContainer) {
+      this.sidebarTitleContainer.classList.remove("justify-center");
+      this.sidebarTitleContainer.classList.add("justify-between");
+    }
 
     // Show elements
     if (this.sidebarTitle) this.sidebarTitle.style.display = "block";

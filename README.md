@@ -95,7 +95,6 @@ To modify the theme:
 - save sidebar state (submenu expanded state) to localstorage, or determine from the url
 - change the current menu item background color, e.g. in /product-detail, the Product Detail (and the E-commerce) tab should be colored differently
 - wait for sidebar to load before loading in the main content to prevent jumping
-- the fnrt logo while the sidebar is collapsed is off-center
 - consider using <i> tags with `data-lucide` attribute: `<i data-lucide="x"></i>` rathen than embedding SVGs directly
 - Fix color pallete for light/dark theme
 - Add mobile support for sidebar
