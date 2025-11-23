@@ -1,0 +1,841 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fnrt - Product Detail</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.config.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.js" />
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.js"></script>
+
+    <!-- For carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css" />
+  </head>
+  <body class="bg-gray-50 dark:bg-gray-900 font-inter antialiased transition-colors duration-200">
+    <div class="flex h-screen overflow-hidden p-4 gap-4">
+      <!-- Main Content -->
+      <div include-html="sidebar.html"></div>
+      <main
+        class="flex-1 flex flex-col bg-white dark:bg-gray-800 rounded-lg border border-muted dark:border-gray-700 overflow-y-scroll p-4 gap-y-2"
+      >
+        <div class="flex flex-col md:flex-row justify-between">
+          <h1 class="text-2xl font-[560] text-nowrap">Acme Prism T-Shirt</h1>
+          <div class="flex items-center justify-center md:justify-start space-x-2">
+            <!-- Edit Button -->
+            <button class="bg-primary px-3.5 py-2 h-full flex items-center gap-2 text-sm rounded-md">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-pen-line-icon lucide-pen-line w-3.5 h-3.5 text-white"
+              >
+                <path d="M13 21h8" />
+                <path
+                  d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"
+                />
+              </svg>
+              <span class="text-white">Edit</span>
+            </button>
+
+            <!-- Destructive Button -->
+            <button class="bg-destructive px-2.5 py-2 h-full flex items-center gap-2 text-sm rounded-md">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-trash2-icon lucide-trash-2 w-4 h-4 text-white"
+              >
+                <path d="M10 11v6" />
+                <path d="M14 11v6" />
+                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" />
+                <path d="M3 6h18" />
+                <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="flex gap-4 [&_span]:text-gray-700">
+          <div class="text-sm text-gray-500">
+            <span class="font-semibold">Seller : </span>
+            Poetic Fashion
+          </div>
+          <div class="text-sm text-gray-500">
+            <span class="font-semibold">Published : </span>
+            20 Oct, 2024
+          </div>
+          <div class="text-sm text-gray-500">
+            <span class="font-semibold">SKU : </span>
+            WH1000XM4
+          </div>
+        </div>
+
+        <div>
+          <!-- Image slider -->
+          <div class="flex flex-col xl:flex-row gap-4">
+            <div class="w-full xl:w-1/3">
+              <div class="sticky space-y-4 top-0">
+                <div class="swiper main-swiper rounded-lg">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide flex justify-center items-center bg-white">
+                      <img src="/assets/images/products/01.jpeg" />
+                    </div>
+                    <div class="swiper-slide flex justify-center items-center bg-white">
+                      <img src="/assets/images/products/02.jpeg" />
+                    </div>
+                    <div class="swiper-slide flex justify-center items-center bg-white">
+                      <img src="/assets/images/products/03.jpeg" />
+                    </div>
+                    <div class="swiper-slide flex justify-center items-center bg-white">
+                      <img src="/assets/images/products/04.jpeg" />
+                    </div>
+                    <div class="swiper-slide flex justify-center items-center bg-white">
+                      <img src="/assets/images/products/05.jpeg" />
+                    </div>
+                    <div class="swiper-slide flex justify-center items-center bg-white">
+                      <img src="/assets/images/products/06.jpeg" />
+                    </div>
+                    <div class="swiper-slide flex justify-center items-center bg-white">
+                      <img src="/assets/images/products/07.jpeg" />
+                    </div>
+                  </div>
+                  <div class="swiper-button-next text-black"></div>
+                  <div class="swiper-button-prev text-black"></div>
+                </div>
+                <div class="swiper thumb-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide opacity-60 [&.swiper-slide-thumb-active]:opacity-100 group">
+                      <img
+                        class="aspect-square w-full object-contain rounded-lg scale-[0.97] group-[&.swiper-slide-thumb-active]:outline outline-1"
+                        src="/assets/images/products/01.jpeg"
+                      />
+                    </div>
+                    <div class="swiper-slide opacity-60 [&.swiper-slide-thumb-active]:opacity-100 group">
+                      <img
+                        class="aspect-square w-full object-contain rounded-lg scale-[0.97] group-[&.swiper-slide-thumb-active]:outline outline-1"
+                        src="/assets/images/products/02.jpeg"
+                      />
+                    </div>
+                    <div class="swiper-slide opacity-60 [&.swiper-slide-thumb-active]:opacity-100 group">
+                      <img
+                        class="aspect-square w-full object-contain rounded-lg scale-[0.97] group-[&.swiper-slide-thumb-active]:outline outline-1"
+                        src="/assets/images/products/03.jpeg"
+                      />
+                    </div>
+                    <div class="swiper-slide opacity-60 [&.swiper-slide-thumb-active]:opacity-100 group">
+                      <img
+                        class="aspect-square w-full object-contain rounded-lg scale-[0.97] group-[&.swiper-slide-thumb-active]:outline outline-1"
+                        src="/assets/images/products/04.jpeg"
+                      />
+                    </div>
+                    <div class="swiper-slide opacity-60 [&.swiper-slide-thumb-active]:opacity-100 group">
+                      <img
+                        class="aspect-square w-full object-contain rounded-lg scale-[0.97] group-[&.swiper-slide-thumb-active]:outline outline-1"
+                        src="/assets/images/products/05.jpeg"
+                      />
+                    </div>
+                    <div class="swiper-slide opacity-60 [&.swiper-slide-thumb-active]:opacity-100 group">
+                      <img
+                        class="aspect-square w-full object-contain rounded-lg scale-[0.97] group-[&.swiper-slide-thumb-active]:outline outline-1"
+                        src="/assets/images/products/06.jpeg"
+                      />
+                    </div>
+                    <div class="swiper-slide opacity-60 [&.swiper-slide-thumb-active]:opacity-100 group">
+                      <img
+                        class="aspect-square w-full object-contain rounded-lg scale-[0.97] group-[&.swiper-slide-thumb-active]:outline outline-1"
+                        src="/assets/images/products/07.jpeg"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item description -->
+            <div class="flex-1 space-y-4">
+              <div class="flex overflow-x-scroll gap-4 [&_svg]:w-6 [&_svg]:h-6 [&_svg]:text-gray-400">
+                <div class="flex-1 p-2 bg-muted outline outline-1 outline-gray-200 rounded-lg items-start py-4">
+                  <div class="flex gap-4">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-circle-dollar-sign-icon lucide-circle-dollar-sign"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8" />
+                      <path d="M12 18V6" />
+                    </svg>
+                    <div class="flex flex-col gap-1">
+                      <span class="text-gray-500 text-sm">Price</span>
+                      <span class="font-[450] text-lg">$120.40</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex-1 p-2 bg-muted outline outline-1 outline-gray-200 rounded-lg items-start py-4">
+                  <div class="flex gap-4">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-truck-icon lucide-truck"
+                    >
+                      <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" />
+                      <path d="M15 18H9" />
+                      <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14" />
+                      <circle cx="17" cy="18" r="2" />
+                      <circle cx="7" cy="18" r="2" />
+                    </svg>
+                    <div class="flex flex-col gap-1">
+                      <span class="text-gray-500 text-sm">No. of Orders</span>
+                      <span class="font-[450] text-lg">250</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex-1 p-2 bg-muted outline outline-1 outline-gray-200 rounded-lg items-start py-4">
+                  <div class="flex gap-4">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-layers2-icon lucide-layers-2"
+                    >
+                      <path
+                        d="M13 13.74a2 2 0 0 1-2 0L2.5 8.87a1 1 0 0 1 0-1.74L11 2.26a2 2 0 0 1 2 0l8.5 4.87a1 1 0 0 1 0 1.74z"
+                      />
+                      <path
+                        d="m20 14.285 1.5.845a1 1 0 0 1 0 1.74L13 21.74a2 2 0 0 1-2 0l-8.5-4.87a1 1 0 0 1 0-1.74l1.5-.845"
+                      />
+                    </svg>
+                    <div class="flex flex-col gap-1">
+                      <span class="text-gray-500 text-sm">Available Stocks</span>
+                      <span class="font-[450] text-lg">2,550</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex-1 p-2 bg-muted outline outline-1 outline-gray-200 rounded-lg items-start py-4">
+                  <div class="flex gap-4">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-circle-dollar-sign-icon lucide-circle-dollar-sign"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8" />
+                      <path d="M12 18V6" />
+                    </svg>
+                    <div class="flex flex-col gap-1">
+                      <span class="text-gray-500 text-sm">Total Revenue</span>
+                      <span class="font-[450] text-lg">$45,938</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col gap-4">
+                <div class="p-4 outline rounded-lg outline-1 outline-gray-200">
+                  <div class="grid grid-cols-1 lg:grid-cols-3 lg:space-x-4">
+                    <div class="space-y-8 col-span-2">
+                      <div>
+                        <h2 class="font-bold text-gray-800 mb-2">Description:</h2>
+                        <span class="text-gray-500">
+                          Tommy Hilfiger men striped pink sweatshirt. Crafted with cotton. Material composition is 100%
+                          organic cotton.
+                        </span>
+                      </div>
+                      <div>
+                        <h2 class="font-bold text-gray-800 mb-2">Key Features:</h2>
+                        <ul class="text-gray-500 list-disc list-inside">
+                          <li>Industry-leading noise cancellation</li>
+                          <li>30-hour battery life</li>
+                          <li>Touch sensor controls</li>
+                          <li>Speak-to-chat technology</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <table class="[&_tr]:border [&_tr]:border-gray-200 h-fit [&_td]:p-2 text-sm mt-4">
+                      <tr>
+                        <td class="font-bold">Category</td>
+                        <td class="text-right">T-Shirt</td>
+                      </tr>
+                      <tr>
+                        <td class="font-bold">Brand</td>
+                        <td class="text-right">Tommy Hilfiger</td>
+                      </tr>
+                      <tr>
+                        <td class="font-bold">Color</td>
+                        <td class="text-right">Purple</td>
+                      </tr>
+                      <tr>
+                        <td class="font-bold">Weight</td>
+                        <td class="text-right">140 Gr</td>
+                      </tr>
+                    </table>
+                  </div>
+                  <form class="mt-8 space-y-8" id="product-form">
+                    <div class="[&_input]:cursor-pointer">
+                      <h2 class="font-bold text-gray-800 mb-2">Colors:</h2>
+                      <div class="flex gap-4">
+                        <input
+                          type="radio"
+                          name="color"
+                          value="green"
+                          class="appearance-none w-8 h-8 bg-green-400 rounded-full checked:ring-gray-600 checked:ring-1 ring-offset-2"
+                        />
+                        <input
+                          type="radio"
+                          name="color"
+                          value="indigo"
+                          class="appearance-none w-8 h-8 bg-indigo-400 rounded-full checked:ring-gray-600 checked:ring-1 ring-offset-2"
+                        />
+                        <input
+                          type="radio"
+                          name="color"
+                          value="violet"
+                          class="appearance-none w-8 h-8 bg-violet-400 rounded-full checked:ring-gray-600 checked:ring-1 ring-offset-2"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <h2 class="font-bold text-gray-800 mb-2">Sizes:</h2>
+                      <div class="flex gap-4 text-xs [&_input]:cursor-pointer">
+                        <div class="relative w-10 h-10">
+                          <input
+                            type="radio"
+                            name="size"
+                            value="sm"
+                            class="appearance-none w-full h-full outline outline-1 outline-gray-200 checked:outline-gray-700 checked:bg-gray-100 rounded-md"
+                          />
+                          <span class="absolute pointer-events-none top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                            >SM</span
+                          >
+                        </div>
+                        <div class="relative w-10 h-10">
+                          <input
+                            type="radio"
+                            name="size"
+                            value="md"
+                            class="appearance-none w-full h-full outline outline-1 outline-gray-200 checked:outline-gray-700 checked:bg-gray-100 rounded-md"
+                          />
+                          <span class="absolute pointer-events-none top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                            >MD</span
+                          >
+                        </div>
+                        <div class="relative w-10 h-10">
+                          <input
+                            type="radio"
+                            name="size"
+                            value="lg"
+                            class="appearance-none w-full h-full outline outline-1 outline-gray-200 checked:outline-gray-700 checked:bg-muted rounded-md"
+                          />
+                          <span class="absolute pointer-events-none top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                            >LG</span
+                          >
+                        </div>
+                        <div class="relative w-10 h-10">
+                          <input
+                            type="radio"
+                            name="size"
+                            value="xl"
+                            class="appearance-none w-full h-full outline outline-1 outline-gray-200 checked:outline-gray-700 checked:bg-muted rounded-md"
+                          />
+                          <span class="absolute pointer-events-none top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                            >XL</span
+                          >
+                        </div>
+                        <div class="relative w-10 h-10">
+                          <input
+                            type="radio"
+                            name="size"
+                            value="xll"
+                            class="appearance-none w-full h-full outline outline-1 outline-gray-200 checked:outline-gray-700 checked:bg-muted rounded-md"
+                          />
+                          <span class="absolute pointer-events-none top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                            >XLL</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex gap-3">
+                      <button
+                        class="bg-primary px-3.5 py-2 h-full flex items-center gap-2 text-sm rounded-md"
+                        type="submit"
+                        name="action"
+                        value="add_to_cart"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="w-4 h-4 text-white lucide lucide-shopping-cart-icon lucide-shopping-cart"
+                        >
+                          <circle cx="8" cy="21" r="1" />
+                          <circle cx="19" cy="21" r="1" />
+                          <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+                        </svg>
+                        <span class="text-white">Add to Cart</span>
+                      </button>
+                      <button
+                        class="px-3.5 py-2 h-full flex items-center gap-2 text-sm rounded-md outline outline-1 outline-gray-200"
+                        type="submit"
+                        name="action"
+                        value="add_to_wishlist"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="w-4 h-4 lucide lucide-heart-icon lucide-heart"
+                        >
+                          <path
+                            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"
+                          />
+                        </svg>
+                        <span>Wishlist</span>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <template id="review-template">
+                <div class="grid grid-rows-2 w-full outline outline-1 outline-gray-200 p-4 space-y-2 rounded-lg">
+                  <div class="flex justify-between h-fit">
+                    <div class="grid grid-cols-[auto_1fr] gap-x-3 gap-y-1">
+                      <div class="review-user-profile row-span-2 w-10 h-10">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="w-full h-full lucide lucide-circle-user-round-icon lucide-circle-user-round"
+                        >
+                          <path d="M18 20a6 6 0 0 0-12 0" />
+                          <circle cx="12" cy="10" r="4" />
+                          <circle cx="12" cy="12" r="10" />
+                        </svg>
+                      </div>
+                      <span class="review-user-name">Mark P.</span>
+                      <div
+                        class="outline outline-1 outline-gray-200 rounded text-sm text-gray-500 font-bold flex items-center justify-center gap-1 py-1 px-2 w-fit"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="w-4 h-4 fill-orange-400 stroke-orange-400 lucide lucide-star-icon lucide-star"
+                        >
+                          <path
+                            d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                          />
+                        </svg>
+                        <span class="review-rating">3.2</span>
+                      </div>
+                    </div>
+                    <div class="review-timestamp text-xs text-gray-500">5 days ago</div>
+                  </div>
+                  <div class="grid gap-2">
+                    <span class="review-comment-title font-semibold">Decent</span>
+                    <p class="review-comment text-sm text-gray-500">Its okay i mean... but</p>
+                  </div>
+                </div>
+              </template>
+
+              <!-- Review -->
+              <div class="rounded-lg min-h-96 outline outline-1 outline-gray-200 p-4 space-y-4">
+                <div class="flex justify-between">
+                  <h2 class="font-semibold">Reviews</h2>
+                  <button
+                    class="flex gap-2 outline outline-1 outline-gray-200 items-center text-sm p-2 rounded"
+                    id="review-form-open-btn"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="w-4 h-4 text-gray-800 lucide lucide-circle-plus-icon lucide-circle-plus"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <path d="M8 12h8" />
+                      <path d="M12 8v8" />
+                    </svg>
+                    <span>Submit Review</span>
+                  </button>
+
+                  <!-- popup -->
+                  <template id="review-form-popup">
+                    <form id="review-form" class="relative grid gap-y-6 min-w-[25vw]">
+                      <button onclick="popPopup()" class="absolute top-0 right-0">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-x-icon lucide-x"
+                        >
+                          <path d="M18 6 6 18" />
+                          <path d="m6 6 12 12" />
+                        </svg>
+                      </button>
+
+                      <div>
+                        <h1 class="font-bold text-lg">Leave a review</h1>
+                        <span class="text-sm text-gray-500">Share your thoughts about this product.</span>
+                      </div>
+
+                      <div class="flex flex-col flex-nowrap gap-4 [&_input]:w-full text-sm">
+                        <div class="flex gap-4">
+                          <div class="flex-1 space-y-1.5">
+                            <label class="font-semibold">Name</label>
+                            <input
+                              placeholder="Enter your name"
+                              name="name"
+                              class="outline outline-1 outline-gray-200 rounded p-2 focus:ring"
+                            />
+                          </div>
+                          <div class="flex-1 space-y-1.5">
+                            <label class="font-semibold">Email</label>
+                            <input
+                              placeholder="Enter your email"
+                              name="email"
+                              class="outline outline-1 outline-gray-200 rounded p-2 focus:ring"
+                            />
+                          </div>
+                        </div>
+                        <div class="w-full col-span-full space-y-1.5">
+                          <label class="font-semibold">Comment</label>
+                          <textarea
+                            placeholder="Share your thoughts..."
+                            name="comment"
+                            class="w-full h-48 resize-y m-0 outline outline-1 outline-gray-200 rounded p-2 focus:ring"
+                          ></textarea>
+                        </div>
+                      </div>
+
+                      <div class="flex gap-4 items-center">
+                        <div class="flex gap-2" id="star-rating">
+                          <input type="radio" name="rating" id="rating-1" value="1" class="hidden peer" />
+                          <label for="rating-1" class="cursor-pointer">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              class="w-8 h-8 transition-all duration-100 text-gray-300 peer-checked:fill-yellow-400 peer-checked:stroke-transparent hover:text-gray-500"
+                            >
+                              <path
+                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                              />
+                            </svg>
+                          </label>
+
+                          <input type="radio" name="rating" id="rating-2" value="2" class="hidden peer" />
+                          <label for="rating-2" class="cursor-pointer">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              class="w-8 h-8 transition-all duration-100 text-gray-300 peer-checked:fill-yellow-400 peer-checked:stroke-transparent hover:text-gray-500"
+                            >
+                              <path
+                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                              />
+                            </svg>
+                          </label>
+
+                          <input type="radio" name="rating" id="rating-3" value="3" class="hidden peer" />
+                          <label for="rating-3" class="cursor-pointer">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              class="w-8 h-8 transition-all duration-100 text-gray-300 peer-checked:fill-yellow-400 peer-checked:stroke-transparent hover:text-gray-500"
+                            >
+                              <path
+                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                              />
+                            </svg>
+                          </label>
+
+                          <input type="radio" name="rating" id="rating-4" value="4" class="hidden peer" />
+                          <label for="rating-4" class="cursor-pointer">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              class="w-8 h-8 transition-all duration-100 text-gray-300 peer-checked:fill-yellow-400 peer-checked:stroke-transparent hover:text-gray-500"
+                            >
+                              <path
+                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                              />
+                            </svg>
+                          </label>
+
+                          <input type="radio" name="rating" id="rating-5" value="5" class="hidden peer" />
+                          <label for="rating-5" class="cursor-pointer">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              class="w-8 h-8 transition-all duration-100 text-gray-300 peer-checked:fill-yellow-400 peer-checked:stroke-transparent hover:text-gray-500"
+                            >
+                              <path
+                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                              />
+                            </svg>
+                          </label>
+                        </div>
+                        <label id="star-rating-label" class="text-sm text-gray-500">No rating selected</label>
+                      </div>
+                      <button
+                        class="bg-primary px-3.5 py-2 h-full flex items-center gap-2 text-sm rounded-md justify-center"
+                        type="submit"
+                      >
+                        <span class="text-white">Submit Review</span>
+                      </button>
+                    </form>
+                  </template>
+                </div>
+                <div class="grid grid-cols-1 gap-y-4 lg:grid-cols-3 lg:space-x-4">
+                  <div class="flex flex-col gap-4 col-span-2 order-2 lg:order-1" id="review-list"></div>
+                  <!-- Review summary -->
+                  <div class="rounded-lg outline outline-1 outline-gray-200 overflow-hidden h-fit order-1 lg:order-2">
+                    <div class="p-4 bg-muted flex flex-col 2xl:flex-row justify-between items-center">
+                      <div
+                        class="flex items-center gap-1 text-orange-400 [&_svg]:w-4 [&_svg]:h-4 [&_svg]:stroke-orange-400"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="__star-average lucide lucide-star-icon lucide-star"
+                        >
+                          <path
+                            d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="__star-average lucide lucide-star-icon lucide-star"
+                        >
+                          <path
+                            d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="__star-average lucide lucide-star-icon lucide-star"
+                        >
+                          <path
+                            d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="__star-average lucide lucide-star-icon lucide-star"
+                        >
+                          <path
+                            d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="__star-average lucide lucide-star-icon lucide-star"
+                        >
+                          <path
+                            d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                          />
+                        </svg>
+                      </div>
+                      <span class="review-summary-rating text-sm text-gray-600 text-nowrap">4.3 (12 reviews)</span>
+                    </div>
+                    <div
+                      class="p-2 2xl:p-4 text-sm space-y-4 [&_.\_\_star-progress]:min-w-8 [&_.\_\_star-progress]:text-right"
+                    >
+                      <div class="review-summary-individual-star flex items-center gap-4">
+                        <span class="text-nowrap">5 stars</span>
+                        <div class="rounded overflow-hidden bg-muted flex-1 min-w-12 h-2">
+                          <div class="__star-progress-bar bg-primary h-full origin-right"></div>
+                        </div>
+                        <span class="__star-progress">70%</span>
+                      </div>
+                      <div class="review-summary-individual-star flex items-center gap-4">
+                        <span class="text-nowrap">4 stars</span>
+                        <div class="rounded overflow-hidden bg-muted flex-1 min-w-12 h-2">
+                          <div class="__star-progress-bar bg-primary h-full origin-right"></div>
+                        </div>
+                        <span class="__star-progress">17%</span>
+                      </div>
+                      <div class="review-summary-individual-star flex items-center gap-4">
+                        <span class="text-nowrap">3 stars</span>
+                        <div class="rounded overflow-hidden bg-muted flex-1 min-w-12 h-2">
+                          <div class="__star-progress-bar bg-primary h-full origin-right"></div>
+                        </div>
+                        <span class="__star-progress">7%</span>
+                      </div>
+                      <div class="review-summary-individual-star flex items-center gap-4">
+                        <span class="text-nowrap">2 stars</span>
+                        <div class="rounded overflow-hidden bg-muted flex-1 min-w-12 h-2">
+                          <div class="__star-progress-bar bg-primary h-full origin-right"></div>
+                        </div>
+                        <span class="__star-progress">4%</span>
+                      </div>
+                      <div class="review-summary-individual-star flex items-center gap-4">
+                        <span class="text-nowrap">1 stars</span>
+                        <div class="rounded overflow-hidden bg-muted flex-1 min-w-12 h-2">
+                          <div class="__star-progress-bar bg-primary h-full origin-right"></div>
+                        </div>
+                        <span class="__star-progress">2%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- JavaScript Modules -->
+    <script src="assets/js/popup.js"></script>
+    <script src="assets/js/sidebar.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/interactions.js"></script>
+    <script src="assets/js/notifications.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/product-detail.js"></script>
+  </body>
+</html>

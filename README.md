@@ -7,7 +7,11 @@ A modern, responsive dashboard theme built with HTML, Tailwind CSS, and JavaScri
 ```
 theme-shadcn-html/
 ├── index.html          # Main HTML file
+├── sidebar.html        # Common layout across all pages
+├── *.html              # Other pages
 ├── assets/
+│   ├── images/
+│   │   └── *.png       # Image assets
 │   ├── css/
 │   │   └── styles.css  # Custom CSS styles
 │   ├── js/
@@ -35,29 +39,33 @@ theme-shadcn-html/
 ## Customization
 
 ### Colors
-The theme uses Tailwind CSS classes. You can customize colors by modifying the Tailwind config in `index.html`:
+
+The theme uses Tailwind CSS classes. You can customize colors by modifying the Tailwind config in `tailwind.config.js`:
 
 ```javascript
-tailwind.config = {
-    theme: {
-        extend: {
-            colors: {
-                // Your custom colors here
-            }
-        }
-    }
-}
+window.tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        // Your custom colors here
+      },
+    },
+  },
+};
 ```
 
 ### Layout
+
 - Main layout is in `index.html`
 - Custom styles are in `assets/css/styles.css`
 - JavaScript functionality is in `assets/js/script.js`
 
 ### Adding New Pages
+
 1. Create new HTML files in the root directory
 2. Copy the basic structure from `index.html`
 3. Include the necessary CSS and JS files
+4. Add or modify entry from `sidebar.js`
 
 ## Browser Support
 
@@ -71,6 +79,7 @@ tailwind.config = {
 - [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
 - [Chart.js](https://www.chartjs.org/) - Simple yet flexible JavaScript charting
 - [Lucide](https://lucide.dev/) - Beautiful & consistent icon toolkit
+- [Swiper](https://swiperjs.com/) - Most modern mobile touch slider with hardware accelerated transitions 
 
 ## Development
 
@@ -80,6 +89,15 @@ To modify the theme:
 2. Edit `assets/css/styles.css` for custom styles
 3. Edit `assets/js/script.js` for functionality changes
 4. Test in multiple browsers
+
+## TODO
+
+- save sidebar state (submenu expanded state) to localstorage, or determine from the url
+- change the current menu item background color, e.g. in /product-detail, the Product Detail (and the E-commerce) tab should be colored differently
+- wait for sidebar to load before loading in the main content to prevent jumping
+- consider using <i> tags with `data-lucide` attribute: `<i data-lucide="x"></i>` rathen than embedding SVGs directly
+- Fix color pallete for light/dark theme
+- Add mobile support for sidebar
 
 ## License
 
